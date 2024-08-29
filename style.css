@@ -17,20 +17,37 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 48px;
+    padding: 20px 230px;
     height: 65px;
 }
+
 
 .navbar__menu_container{
     display: flex;
     gap: 30px;
 }
 
-.navbar a{
+.navbar__menu_container a{
     color: white;
     text-decoration: none;
-    
+    font-size: 18px;
 }
+
+.Get_App{
+    display: inline-block;
+    font-size: 14px;
+}
+.Get_App_icon{
+    height: 10px;
+    filter: invert(100%);
+}
+.Get_App a{ 
+    font-weight: 420;
+    height: 8px;
+    color: white;
+    text-decoration: none;
+}
+
 
 .navbar__menu_container .user_icon{
     height: 30px;
