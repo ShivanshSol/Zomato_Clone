@@ -10,14 +10,15 @@
     background: url(./images/heroSectionBackground.png);
     background-size: cover;
     background-position: center;
-    min-height: 60.5vh;
+    min-height: 60.4vh;
+    color: white;
 }
 
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 230px;
+    padding: 20px 15%;
     height: 65px;
 }
 
@@ -31,6 +32,7 @@
     color: white;
     text-decoration: none;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .Get_App{
@@ -59,8 +61,90 @@
     border: solid 1px white;
     display: none;
 }
-/* Screen size: 0 to 600 */
+
+.hero__section_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    height: calc(60.4vh - 64px) /*360px*/ ;
+    position: relative;
+    top: -28px;
+    transform: scale(1.05);
+}
+.hero__section_logo{
+    width: 270px;
+    height: auto;
+    position: relative;
+    top: -8px;
+}
+
+.hero__section_title{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 350;
+}
+
+
+.hero__section_container_input{
+    background-color: white;
+    border-radius: 10px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 12px 0 12px;
+}
+
+.client_location{
+    font-weight: 480;
+}
+
+.input_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.location_icon{
+    height: 22px;
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(310deg);
+    opacity: 90%;
+    position: relative;
+    top: -1px;
+}
+.input_container_location{
+    border: none;
+    font-size: 14px;
+}
+.input_seperator{
+    border: none; /* Remove default border */
+    border-left: 2px solid rgb(182, 182, 182); /* Line thickness and color */
+    height: 20px; /* Line height */
+    width: 0; /* No horizontal width */
+}
+.search_icon{
+    height: 22px;
+    color: rgb(44, 44, 44);
+    opacity: 68%;
+    /* rotate: -45deg; */
+    position: relative;
+    top: -1px;
+}
+.input_container_search{
+    width: 460px;
+    margin-left: 10px;
+    border: none;
+}
+
+
+
+/*----- Screen size: 0 to 600 -----*/
+
 @media only screen and (max-width: 600px){
+
     .navbar__menu_container .user_icon{
         display: flex;
         color: rgb(239, 79, 95);
@@ -77,4 +161,256 @@
     .hero__section{
         min-height: 80vh;
     }
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px;
+        height: 65px;
+    }
+
+
+    .hero__section_container{
+        margin-top: 80px;
+        position: relative;
+        top: -32px; */
+    }
+
+    .hero__section_logo{
+        width: 50%;
+        height: auto;
+    }
+
+    .hero__section_title{
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .client_location{
+        font-weight: 500;
+    }
+
+
+    .hero__section_container_input{
+        background-color: transparent;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .input_container{
+        background-color: white;
+        border-radius: 6px;
+        height: 36px;
+        width: 98%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 4px;
+    }
+    .location_icon{
+        margin-left: 12px;
+    }
+    .input_container_location{
+        width: auto;
+        padding: 0 0 0 10px;
+    }
+    .input_seperator{
+        display: none;
+    }
+    .search_icon{
+        margin-left: 12px;
+    }
+    .input_container_search{
+        width: 70vw;
+        border: none;
+    }
+
 }
+
+
+
+
+
+/*out of media query*/
+
+.container{
+    margin: 3rem auto;
+    width: 90%;
+}
+.we__offer{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.we__offer_card{
+    height: 230px;
+    width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: solid 1px #e0e0e0;
+}
+.we__offer_image{
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+}
+.we__offer_image img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#OrderOnline{
+    position: relative;
+    top: -78px
+}
+
+#Dining{
+    transform: scale(1.3);
+    position: relative;
+    top: -25px
+}
+
+#LiveEvents{
+    position: relative;
+    top: -58px
+}
+
+
+.we__offer_card h1{
+    font-size: 20px;
+    font-weight: 400;
+    margin: 8px 18px 0 18px;
+    
+}
+.we__offer_card p{
+    font-size: 16px;
+    color: rgb(78, 78, 78);
+    margin: 0 18px;
+}
+
+.collections{
+    width: 1100px;
+    align-items: center;
+    margin-top: 80px ;
+}
+
+.collections h1{
+    font-size: 32px;
+    font-weight: 500;
+
+}
+
+.collections__sub_heading{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.collections__sub_heading span:nth-child(2){
+    color: rgb(239, 79, 95);
+    cursor: pointer;
+}
+
+.collections__sub_heading .arrow{
+    width: 8px;
+    height: 12px;
+    margin-left: 8px;
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(310deg);
+    cursor: pointer;
+}
+
+
+.collections__card_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.collections__card_container .cards{
+    height: 300px;
+    width: 240px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.card1 {
+    background-image: url('images/collection1.jpg');
+}
+
+.card2 {
+    background-image: url('images/collection2.jpg');
+}
+
+.card3 {
+    background-image: url('images/collection3.jpg');
+}
+
+.card4 {
+    background-image: url('images/collection4.jpg');
+}
+
+.cards .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(
+      
+        rgba(225, 0, 0, 1) 0%,
+        rgba(225, 0, 2, 1) 50%,
+        rgba(225, 0, 0, 1) 85%,
+    );
+    z-index: 5;
+}
+
+
+
+
+.cards .content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    z-index: 6;
+}
+
+
+
+
+.cards .content span img{
+    width: 8px;
+    height: 12px;
+    margin-left: 6px;
+    filter: invert(100%); /*sepia(100%) saturate(0%) hue-rotate(310deg); white*/
+}
+
+
+
