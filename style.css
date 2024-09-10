@@ -262,7 +262,7 @@ input:focus{
 }
 .we__offer_card{
     height: 240px;
-    width: 350sspx;
+    width: 350px;
     border-radius: 15px;
     overflow: hidden;
     border: solid 1px #e0e0e0;
@@ -503,9 +503,9 @@ input:focus{
     gap: 10px;
 }
 .input_choice input[type="radio"]:checked {
-    background-color: red;
-    border-color: red;
-    color: red;
+    height: 15px;
+    width: 15px;
+    accent-color: rgb(239, 79, 95);
   }
 .input__section{
     display: flex;
