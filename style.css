@@ -1,4 +1,4 @@
-*{
+*{  
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,13 +12,14 @@
     background-position: center;
     min-height: 60.4vh;
     color: white;
+    width: 100%;
 }
 
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 15%;
+    padding: 20px 14%;
     height: 65px;
 }
 
@@ -71,10 +72,9 @@
     height: calc(60.4vh - 64px) /*360px*/ ;
     position: relative;
     top: -28px;
-    transform: scale(1.05);
 }
 .hero__section_logo{
-    width: 270px;
+    width: 280px;
     height: auto;
     position: relative;
     top: -8px;
@@ -90,12 +90,13 @@
 .hero__section_container_input{
     background-color: white;
     border-radius: 10px;
-    height: 48px;
+    height: 54px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
     padding: 0 12px 0 12px;
+    cursor: text;
 }
 
 .client_location{
@@ -107,6 +108,7 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
+    cursor: text;
 }
 .location_icon{
     height: 22px;
@@ -114,10 +116,12 @@
     opacity: 90%;
     position: relative;
     top: -1px;
+    cursor: default;
 }
 .input_container_location{
     border: none;
     font-size: 14px;
+    cursor: text;
 }
 .input_seperator{
     border: none; /* Remove default border */
@@ -132,11 +136,18 @@
     /* rotate: -45deg; */
     position: relative;
     top: -1px;
+    cursor: default;
 }
 .input_container_search{
+    height: 20px;
     width: 460px;
     margin-left: 10px;
     border: none;
+    font-size: 14px;
+}
+input:focus{
+    outline: none;
+    
 }
 
 
@@ -173,7 +184,7 @@
     .hero__section_container{
         margin-top: 80px;
         position: relative;
-        top: -32px; */
+        top: -32px;
     }
 
     .hero__section_logo{
@@ -239,22 +250,24 @@
 /*out of media query*/
 
 .container{
-    margin: 3rem auto;
+    margin: 2rem auto;
     width: 90%;
 }
 .we__offer{
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
 }
 .we__offer_card{
-    height: 230px;
-    width: 350px;
+    height: 240px;
+    width: 350sspx;
     border-radius: 15px;
     overflow: hidden;
     border: solid 1px #e0e0e0;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
 }
 .we__offer_image{
     height: 150px;
@@ -283,7 +296,6 @@
     top: -58px
 }
 
-
 .we__offer_card h1{
     font-size: 20px;
     font-weight: 400;
@@ -296,14 +308,33 @@
     margin: 0 18px;
 }
 
+.we__offer_card:hover{
+    transform: scale(1.08);
+}
+
+
+
+
+
+
+
+
+
+
+.container{
+    margin: 3rem auto;
+    width: 90%;
+}
+
 .collections{
-    width: 1100px;
+    margin: 3rem auto;
+    width: 1086px;
     align-items: center;
     margin-top: 80px ;
 }
 
 .collections h1{
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 500;
 
 }
@@ -320,6 +351,7 @@
 .collections__sub_heading span:nth-child(2){
     color: rgb(239, 79, 95);
     cursor: pointer;
+    font-size: 16px;
 }
 
 .collections__sub_heading .arrow{
@@ -336,26 +368,19 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 36px;
+    gap: 0.6rem;
 }
 
 .collections__card_container .cards{
-    height: 300px;
-    width: 240px;
+    height: 320px;
+    width: 264px;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
-
+    position: relative;
+    z-index: -5;
 }
-
-
-
-
-
-
-
-
-
-
 
 .card1 {
     background-image: url('images/collection1.jpg');
@@ -380,37 +405,333 @@
     top: 0;
     left: 0;
     border-radius: 10px;
-    background: linear-gradient(
-      
-        rgba(225, 0, 0, 1) 0%,
-        rgba(225, 0, 2, 1) 50%,
-        rgba(225, 0, 0, 1) 85%,
+    background-image: linear-gradient(
+        rgba(225, 0, 0, 0)40% ,rgba(0, 0, 0, 0.5) 75%,rgba(0, 0, 0, 0.75) 100%
     );
     z-index: 5;
 }
 
-
-
-
-.cards .content{
+.collections__card_container .cards .content{
     position: absolute;
     bottom: 0;
     left: 0;
     color: white;
     padding: 12px 16px;
     font-size: 0.9rem;
-    z-index: 6;
+    z-index: 100;
+}
+
+.collections__card_container .cards .content h4{
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 0.4px;
 }
 
 
-
-
-.cards .content span img{
-    width: 8px;
-    height: 12px;
+.collections__card_container .cards .content span img{
+    width: 6.5px;
+    height: 10px;
+    position: relative;
+    bottom: -0.5px;
     margin-left: 6px;
     filter: invert(100%); /*sepia(100%) saturate(0%) hue-rotate(310deg); white*/
 }
 
 
 
+
+
+
+
+
+
+
+/* ----GET THE APP SECTION ----  */
+
+.get_the_zomato_app{
+    background-color: #FFFBF7;
+    height: 480px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 60px;
+    padding: 0 300px;
+    gap: 40px;
+}
+
+
+.mobile_banner{
+    height: 266px;
+    width: auto;
+    margin-top: 124px;
+}
+
+
+
+.get_the_zomato_app_section{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 58px;
+    gap: 14px;
+}
+.get_the_zomato_app_section h1{
+    font-weight: 500;
+    font-size: 42px;
+}
+.get_the_zomato_app_section p{
+    font-size: 15px;
+    font-weight: 200px;
+    line-height: 30px;
+    color: #363636;
+    margin: 0 0 10px 0;
+
+}
+.input_type{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+.input_choice{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.input_choice input[type="radio"]:checked {
+    background-color: red;
+    border-color: red;
+    color: red;
+  }
+.input__section{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.input__section input{
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    height: 48px;
+    width: 292px;
+    border-radius: 6px;
+    padding-left: 12px;
+}
+.input__section .input_phone{
+    display: none;     /*flex*/
+    align-items: center;
+    justify-content: center;
+}
+select {
+    border: none;
+    width: 70px; 
+    height: auto;
+    overflow-y: auto; /* Enable vertical scrolling */
+    text-align: center;
+    cursor: pointer;
+  }
+
+.input__section button{
+    height: 48px;
+    width: 150px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(239, 79, 95);
+    font-size: 16px;
+    color: white;
+}
+
+.get_the_zomato_app_section span{
+    font-size: 14px;
+    color: #3636368f;
+    margin: 10px 0 15px 0;
+}
+.get_the_zomato_app_links{
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.get_the_zomato_app_links img{
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.explore_near_me{
+    background-color: #FCFCFC;
+    height: 480px;
+    padding: 0 210px;
+    /* width: 1086px; */
+}
+.explore_options{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.explore_near_me h1{
+    color: #363636;
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.explore_options .dropdown{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 64px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.dropdown button{
+    border: none;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    width: 1020px;
+    text-align: left;
+    padding-left: 14px;
+    cursor: pointer;
+}
+.dropdown span{
+    width: 10px;
+    height: auto;
+    font-weight: 600;
+    transform: rotate(90deg);
+    padding-right:20px;
+    padding-top: 22px;
+}
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: #F8F8F8;
+    height: 480px;
+    padding: 62px 210px 0 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    
+}
+
+footer .footer_head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+
+.footer_logo{
+    height: 28px;
+    width: auto;
+}
+.footer_head_group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.group_button{
+    height: 36px;
+    font-size: 24px;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+}
+.group_button button{
+    border: none;
+    font-size: 18px;
+    background-color: #F8F8F8;
+    width: auto;
+}
+.group_button img{
+    height: 20px;
+    width: auto;
+}
+.group_button span{
+    width: 6px;
+    height: auto;
+    font-weight: 600;
+    transform: rotate(90deg);
+    padding-right:20px ;
+}
+
+.navigation_container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+
+
+
+
+.link__container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 6px;
+}
+.link__container h5{
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.footer__link{
+    font-size: 14px;
+    text-decoration: none;
+    color: #363636c4;
+}
+.disclaimer{
+    margin-top: 24px;
+    font-size: 14px;
+    color: #363636bf;
+}
