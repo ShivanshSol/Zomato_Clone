@@ -89,7 +89,7 @@
 
 .hero__section_container_input{
     background-color: white;
-    border-radius: 10px;
+    border-radius: 8px;
     height: 54px;
     display: flex;
     align-items: center;
@@ -123,6 +123,14 @@
     font-size: 14px;
     cursor: text;
 }
+.input_container .arrow{
+    width: 9px;
+    height: 12px;
+    filter: invert(28%);
+    cursor: pointer;
+    transform: rotate(90deg);
+    margin: 10px;
+}
 .input_seperator{
     border: none; /* Remove default border */
     border-left: 2px solid rgb(182, 182, 182); /* Line thickness and color */
@@ -130,25 +138,52 @@
     width: 0; /* No horizontal width */
 }
 .search_icon{
-    height: 22px;
+    height: 23px;
     color: rgb(44, 44, 44);
     opacity: 68%;
     /* rotate: -45deg; */
     position: relative;
-    top: -1px;
+    top: 0px;
     cursor: default;
 }
 .input_container_search{
     height: 20px;
-    width: 460px;
+    width: 480px;
     margin-left: 10px;
     border: none;
     font-size: 14px;
 }
 input:focus{
     outline: none;
-    
 }
+
+@media only screen and (max-width: 1000px){
+
+    .hero__section_container_input{
+        background-color: white;
+        border-radius: 8px;
+        height: 54px;
+        width: 80vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 0 3rem 0 3rem;
+        cursor: text;
+    }
+    
+    .input_container{
+        width: 40vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        cursor: text;
+        
+    }
+
+}
+
 
 
 
@@ -228,8 +263,8 @@ input:focus{
         margin-left: 12px;
     }
     .input_container_location{
-        width: auto;
-        padding: 0 0 0 10px;
+        width: 74vw;
+        padding: 0 0 0 16px;
     }
     .input_seperator{
         display: none;
@@ -238,8 +273,9 @@ input:focus{
         margin-left: 12px;
     }
     .input_container_search{
-        width: 70vw;
+        width: 270px;
         border: none;
+        font-size: 10px;
     }
 
 }
@@ -311,6 +347,22 @@ input:focus{
 .we__offer_card:hover{
     transform: scale(1.08);
 }
+@media only screen and (max-width: 1000px){
+
+    .we__offer{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .we__offer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: left;
+        gap: 1.5rem;
+    }
+    
+    }
 
 @media only screen and (max-width: 600px){
     .container{
@@ -330,6 +382,7 @@ input:focus{
         width: 44vw;
         border-radius: 15px;
         overflow: hidden;
+        line-height: 14px;
 
     }
     .we__offer_image{
@@ -476,12 +529,12 @@ input:focus{
     left: 0;
     color: white;
     padding: 12px 16px;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     z-index: 100;
 }
 
 .collections__card_container .cards .content h4{
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 300;
     color: white;
     letter-spacing: 0.4px;
@@ -496,7 +549,14 @@ input:focus{
     margin-left: 6px;
     filter: invert(100%); /*white*/
 }
+@media only screen and (max-width: 1000px){
 
+    .collections{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    
+    }
 
 @media only screen and (max-width: 600px){
 
@@ -520,13 +580,33 @@ input:focus{
     }
     .collections__sub_heading span:nth-child(2){
         position: absolute;
-        top: 400px;
+        top: 110vw;
         left: 0;
+        font-size: 14px;
     }
     .collections__card_container .cards{
         height: 42vw;
         width: 42vw;
         position: relative;
+    }
+    .collections__card_container .cards .content{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: white;
+        padding: 12px 8px;
+        font-size: 14px;
+        z-index: 100;
+    }
+    
+    .collections__card_container .cards .content h4{
+        font-size: 12px;
+        font-weight: 300;
+        color: white;
+        letter-spacing: 0.4px;
+    }
+    .collections__card_container .cards .content span{
+        font-size: 10px;
     }
 }
 
@@ -543,7 +623,6 @@ input:focus{
 
 .get_the_zomato_app{
     background-color: #FFFBF7;
-    /* height: 480px; */
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -554,9 +633,9 @@ input:focus{
 
 
 .mobile_banner{
-    height: 266px;
+    height: 420px;
     width: auto;
-    margin-top: 124px;
+    margin-top: 44px;
 }
 
 
@@ -569,7 +648,7 @@ input:focus{
     justify-content: center;
     padding-top: 58px;
     gap: 14px;
-    padding-bottom: 80px ;
+    padding-bottom: 100px ;
 }
 .get_the_zomato_app_section h1{
     font-weight: 500;
@@ -587,7 +666,7 @@ input:focus{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 50px;
+    gap: 52px;
 }
 .input_choice{
     display: flex;
@@ -595,9 +674,13 @@ input:focus{
     align-items: center;
     gap: 10px;
 }
+.input_choice input[type="radio"] {
+    height: 20px;
+    width: 20px;
+  }
 .input_choice input[type="radio"]:checked {
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     accent-color: rgb(239, 79, 95);
   }
 .input__section{
@@ -606,26 +689,50 @@ input:focus{
     justify-content: flex-start;
     gap: 8px;
 }
-.input__section input{
+.input__section .input_email input{
     border: 1px solid rgba(0, 0, 0, 0.18);
     height: 48px;
     width: 292px;
     border-radius: 6px;
     padding-left: 12px;
+    font-size: 16px;
+    
 }
 .input__section .input_phone{
-    display: none;     /*flex*/
+    height: 48px;
+    width: 292px;
+    display: flex;     /*flex*/
     align-items: center;
     justify-content: center;
+    gap: 10px;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid  rgba(0, 0, 0, 0.18);
+    padding: 12px;
+    display: none;
 }
-select {
+select{
     border: none;
+    height: 28px;
     width: 70px; 
     height: auto;
     overflow-y: auto; /* Enable vertical scrolling */
-    text-align: center;
+    text-align: right;
     cursor: pointer;
-  }
+    font-size: 16px;
+}
+select:focus{
+    outline: none;
+}
+
+
+.input_phone input[type="tel"]{
+    border: none;
+    height: 32px;
+    border-left: 1.5px solid  rgba(0, 0, 0, 0.18);
+    border-radius: 0%;
+    font-size: 16px;
+}
 
 .input__section button{
     height: 48px;
@@ -635,6 +742,9 @@ select {
     background-color: rgb(239, 79, 95);
     font-size: 16px;
     color: white;
+}
+.input__section button:hover{
+    background-color: #E03546;
 }
 
 .get_the_zomato_app_section span{
@@ -654,13 +764,20 @@ select {
 }
 
 
+@media only screen and (max-width: 1000px){
 
-
+    .mobile_banner{
+        width: 250px;
+        height: auto;
+        align-self: center;
+    }
+}
 
 @media only screen and (max-width: 600px){
 
 
     .get_the_zomato_app{
+        width: 100vw;
         background-color: #FFFBF7;
         /* height: 480px; */
         display: flex;
@@ -695,14 +812,42 @@ select {
         align-items: center;
         justify-content: flex-start;
         gap: 8px;
+        width: 80vw;
     }
-    .input__section input{
+    .input__section .input_email{
+       width: 72vw; 
+
+    }
+    .input__section .input_email input{
         border: 1px solid rgba(0, 0, 0, 0.18);
         height: 48px;
-        width: 90%;
+        width: 100%;
         border-radius: 6px;
         padding-left: 12px;
     } 
+
+    .input__section button{
+        padding: 0 16px;
+        width: auto;
+    }
+
+    .input__section .input_phone{
+        border: 1px solid rgba(0, 0, 0, 0.18);
+        height: 48px;
+        width: 72vw;
+        justify-content: left;
+        border-radius: 6px;
+        padding-left: 12px;
+    } 
+    .input_phone input[type="tel"]{
+        border: none;
+        height: 32px;
+        border-left: 1.5px solid  rgba(0, 0, 0, 0.18);
+        border-radius: 0%;
+        font-size: 16px;
+        padding-left: 10px;
+        width: 20vw;
+    }
     
     .get_the_zomato_app_section span{
         text-align: center;
@@ -744,6 +889,7 @@ select {
     /* height: 480px; */
     padding: 0 210px;
     /* width: 1086px; */
+    height: auto;
 }
 .explore_options{
     display: flex;
@@ -763,35 +909,104 @@ select {
 .explore_options .dropdown{
     background-color: #FFFFFF;
     width: 100%;
-    height: 64px;
-    padding: 10px;
+    height: auto;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     cursor: pointer;
 }
-.dropdown button{
+.dropdown_tab{
+    width: 100%;
+    height: 64px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dropdown_tab button{
     border: none;
     background-color: #FFFFFF;
     font-size: 20px;
-    width: 1020px;
     text-align: left;
     padding-left: 14px;
     cursor: pointer;
 }
-.dropdown span{
+.dropdown_tab span{
     width: 10px;
     height: auto;
     font-weight: 600;
     transform: rotate(90deg);
     padding-right:20px;
     padding-top: 22px;
+    margin-left: 10px;
 }
+.explore_more{
+    display: none;
+    padding: 16px 24px 24px 24px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.explore_more a{
+    text-decoration: none;
+    color: #3636369e;
+    padding-left: 3px;
+    letter-spacing: 0px;
+}
+.explore_more a:hover{
+    color: #363636;
+}
+.explore_more span{
+    font-size: large;
+    text-align: center;
+    position: relative;
+    top: -3px; 
+    margin: 3px;
+    font-size: 28px ;
+}
+.chains_cities{ 
+    height: auto;
+    padding: 16px 24px 24px 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;  
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 24px;
+    display: none;
+}
+.chains_cities a{
+    width: 13vw;
+    text-decoration: none;
+    color: #3636369e;
+    padding-left: 3px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.chains_cities a:hover{
+    color: #363636;
+}
+
+
+
+
+@media only screen and (max-width: 1000px){
+    .explore_near_me{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    
+    }
 
 @media only screen and (max-width: 600px){
     .explore_near_me{
+        height: auto;
         background-color: #FCFCFC;
         /* height: 480px; */
         padding: 0 1.5rem;
@@ -807,8 +1022,8 @@ select {
     .explore_options .dropdown{
         background-color: #FFFFFF;
         width: 100%;
-        height: 64px;
-        padding: 10px;
+        height: auto;
+        padding: 0 0px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -816,15 +1031,26 @@ select {
         border-radius: 8px;
         cursor: pointer;
     }
-    .dropdown button{
+
+    .dropdown_tab button{
         border: none;
         background-color: #FFFFFF;
-        font-size: 20px;
-        width: 1020px;
+        font-size: 16px;
         text-align: left;
-        padding-left: 14px;
         cursor: pointer;
+        align-self: center;
     }
+    .dropdown_tab span{
+        width: 10px;
+        height: auto;
+        font-weight: 600;
+        transform: rotate(90deg);
+        align-self: center;
+        padding-right:20px;
+        padding-top: 22px;
+        margin-left: 10px;
+    }
+
 }
 
 
@@ -900,12 +1126,12 @@ footer .footer_head{
 }
 
 .navigation_container div:nth-child(3){
-    margin: 40 30px 0 0;
+    margin: 40 50px 0 0;
 }
 
 .link__container{
     width: 100%;
-    padding-right: 56px;
+    padding-right: 38px;
     padding-bottom: 56px;
     display: flex;
     flex-direction: column;
@@ -913,16 +1139,24 @@ footer .footer_head{
     justify-content: center;
     gap: 6px;
 }
+.navigation_container div:nth-child(5){ 
+    padding-right: 10px;
+    gap: 4px;
+}
 .link__container h5{
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 2px;
+}
+.link__container a:hover{
+    color: #363636;
 }
 .section__links_container{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    
 }
 .section__links_container button{
     height: 22px;
@@ -958,8 +1192,18 @@ footer .footer_head{
     margin-top: 20px;
     font-size: 13px;
     color: #363636bf;
+    margin-bottom: 26px;
 }
 
+@media only screen and (max-width: 1000px){
+    footer{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    
+    
+    }
+    
 
 @media only screen and (max-width: 600px){
     footer{
@@ -1087,3 +1331,5 @@ footer .footer_head{
         color: #363636bf;
     }
 }
+
+
