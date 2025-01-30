@@ -69,6 +69,7 @@
                 <div class="input_container">
                     <img src="images/location.png" class="location_icon">
                     <input type="text" name="" value="" class="input_container_location" placeholder="Agra">
+                    <img class="arrow" src="images/play-button.png">
                     <hr class="input_seperator">
                 </div>
                 <div class="input_container">
@@ -162,7 +163,7 @@
 
     <section class="get_the_zomato_app">
 
-        <img class="mobile_banner" src="images/phone_banner.png" alt="">
+        <img class="mobile_banner" src="images/mobile.png" alt="">
 
         <div class="get_the_zomato_app_section">
 
@@ -172,33 +173,40 @@
 
                 <div class="input_type">
                     
-                            <label class="input_choice" for="contact_email">
-                                <input type="radio" name="contact" checked="checked">Email
+                            <label class="input_choice" for="contact_email" onclick="toggleInput('emailBox','phoneBox')">
+                                <input type="radio" name="contact" checked="checked" id="contact_email">Email
                             </label>
                     
                     
-                            <label class="input_choice" for="contact_phone">
-                                <input type="radio" name="contact">Phone
+                            <label class="input_choice" for="contact_phone" onclick="toggleInput('phoneBox','emailBox')">
+                                <input type="radio" name="contact" id="contact_phone" onclick="toggleInput('phoneBox')">Phone
                             </label>
                     
                 </div>
                 
                 <div class="input__section">
-                        <input value="" type="text" placeholder="Email">
-                        <div class="input_phone">
-                            <select name="contact_phone" id="contact_phone" size="6">
-                                <option value="contact_phone_1">+91</option>
-                                <option value="contact_phone_2">+60</option>
-                                <option value="contact_phone_3">+63</option>
-                                <option value="contact_phone_4">+94</option>
-                                <option value="contact_phone_5">+56</option>
-                                <option value="contact_phone_6">+1</option>
-                                <option value="contact_phone_7">+64</option>
-                                <option value="contact_phone_8">+27</option>
-                            </select>
-                            <input value="" type="text" placeholder="type here...">
+                        <div class="input_email" id="emailBox">
+                            <input value="" type="text" placeholder="Email" >
                         </div>
-                        <button>Share App Link</button>
+                        <div class="input_phone" id="phoneBox">
+                            <select name="country_code" id="country_code" size="">
+                                <option value="+91">+91 </option>
+                                <option value="+60">+60 </option>
+                                <option value="+63">+63 </option>
+                                <option value="+94">+94 </option>
+                                <option value="+56">+56 </option>
+                                <option value="+1">+1 </option>
+                                <option value="+64">+64 </option>
+                                <option value="+27">+27 </option>
+                                <option value="+">+ </option>
+                                <option value="+">+ </option>
+                                <option value="+">+ </option>
+                                <option value="+">+ </option>
+                                <option value="+">+ </option>
+                            </select>
+                            <input id="phone" value="" type="tel" placeholder="type here... ">
+                        </div>
+                        <button id="shareApp_button">Share App Link</button>
                 </div>
 
             <span>Download app from</span>
@@ -215,21 +223,147 @@
     <section class="explore_near_me">
         <h1>Explore options near me</h1>
         <div class="explore_options">  
-            <div class="dropdown">
-                <button onclick="">Popular cuisine near me</button>
-                <span class="material-symbols-outlined">chevron_forward</span>
+            <div class="dropdown" title="Popular cuisine near me">
+                <div class="dropdown_tab" onclick="toggleDropdown('dropdown1','droupdownArrow1')">
+                    <button onclick="">Popular cuisine near me</button>
+                    <span class="material-symbols-outlined" id="droupdownArrow1">chevron_forward</span>
+                </div>
+                <div class="explore_more" id="dropdown1">
+                    <a href="">Bakery food near me</a>
+                    <span>.</span><a href="">Beverages food near me</a>
+                    <span>.</span><a href="">Biryani food near me</a>
+                    <span>.</span><a href="">Burger food near me</a>
+                    <span>.</span><a href="">Chinese food near me</a>
+                    <span>.</span><a href="">Coffee food near me</a>
+                    <span>.</span><a href="">Continental food near me</a>
+                    <span>.</span><a href="">Desserts food near me</a>
+                    <span>.</span><a href="">Italian food near me</a>
+                    <span>.</span><a href="">Mithai food near me</a>
+                    <span>.</span><a href="">Momos food near me</a>
+                    <span>.</span><a href="">Mughlai food near me</a>
+                    <span>.</span><a href="">North Indian food near me</a>
+                    <span>.</span><a href="">Pasta food near me</a>
+                    <span>.</span><a href="">Pizza food near me</a>
+                    <span>.</span><a href="">Rolls food near me</a>
+                    <span>.</span><a href="">Sandwich food near me</a>
+                    <span>.</span><a href="">Shake food near me</a>
+                    <span>.</span><a href="">South Indian food near me</a>
+                    <span>.</span><a href="">Street food near me</a>
+                </div>
             </div>
-            <div class="dropdown">
-                <button onclick="">Popular restaurant type near me</button>
-                <span class="material-symbols-outlined">chevron_forward</span>
+            <div class="dropdown" title="Popular restaurant type near me">
+                <div class="dropdown_tab"  onclick="toggleDropdown('dropdown2','droupdownArrow2')">
+                    <button onclick="">Popular restaurant type near me</button>
+                    <span class="material-symbols-outlined" id="droupdownArrow2">chevron_forward</span>
+                </div>
+                <div class="explore_more" id="dropdown2">
+                    <span>.</span><a href="">Bakeries near me</a>
+                    <span>.</span><a href="">Bars near me</a>
+                    <span>.</span><a href="">Beverage Shops near me</a>
+                    <span>.</span><a href="">Bhojanalya near me</a>
+                    <span>.</span><a href="">Cafés near me</a>
+                    <span>.</span><a href="">Casual Dining near me</a>
+                    <span>.</span><a href="">Clubs near me</a>
+                    <span>.</span><a href="">Cocktail Bars near me</a>
+                    <span>.</span><a href="">Dessert Parlors near me</a>
+                    <span>.</span><a href="">Dhabas near me</a>
+                    <span>.</span><a href="">Fine Dining near me</a>
+                    <span>.</span><a href="">Food Courts near me</a>
+                    <span>.</span><a href="">Food Trucks near me</a>
+                    <span>.</span><a href="">Kiosks near me</a>
+                    <span>.</span><a href="">Lounges near me</a>
+                    <span>.</span><a href="">Paan Shop near me</a>
+                    <span>.</span><a href="">Quick Bites near me</a>
+                    <span>.</span><a href="">Sweet Shops near me</a>
+                </div>
             </div>
-            <div class="dropdown">
-                <button onclick="">Top Restaurant Chains</button>
-                <span class="material-symbols-outlined">chevron_forward</span>
+            <div class="dropdown" title="Top Restaurant Chains">
+                <div class="dropdown_tab"  onclick="toggleDropdown('dropdown3','droupdownArrow3')">
+                    <button onclick="">Top Restaurant Chains</button>
+                    <span class="material-symbols-outlined"id="droupdownArrow3">chevron_forward</span>
+                </div>
+                <div class="chains_cities"  id="dropdown3">
+                    <a href="">Bikanervala</a>
+                    <a href="">Burger King</a>
+                    <a href="">Haldiram's</a>
+                    <a href="">KFC</a>
+                    <a href="">McDonald's</a>
+                    <a href="">Pizza Hut</a>
+                    <a href="">Dominos</a>
+                    
+                </div>
             </div>
-            <div class="dropdown">
-                <button onclick="">Cities We deliver To</button>
-                <span class="material-symbols-outlined">chevron_forward</span>
+            <div class="dropdown" title="Cities We deliver To">
+                <div class="dropdown_tab" onclick="toggleDropdown('dropdown4','droupdownArrow4')">
+                    <button onclick="">Cities We deliver To</button>
+                    <span class="material-symbols-outlined" id="droupdownArrow4">chevron_forward</span>
+                </div>
+                <div class="chains_cities"  id="dropdown4">
+                    <a href=""> Delhi NCR</a>
+                    <a href=""> Kolkata</a>
+                    <a href=""> Mumbai</a>
+                    <a href=""> Bengaluru</a>
+                    <a href=""> Pune</a>
+                    <a href=""> Hyderabad</a>
+                    <a href=""> Chennai</a>
+                    <a href=""> Lucknow</a>
+                    <a href=""> Kochi</a>
+                    <a href=""> Jaipur</a>
+                    <a href=""> Ahmedabad</a>
+                    <a href=""> Chandigarh</a>
+                    <a href=""> Goa</a>
+                    <a href=""> Indore</a>
+                    <a href=""> Gangtok</a>
+                    <a href=""> Nashik</a>
+                    <a href=""> Ooty</a>
+                    <a href=""> Shimla</a>
+                    <a href=""> Ludhiana</a>
+                    <a href=""> Guwahati</a>
+                    <a href=""> Amritsar</a>
+                    <a href=""> Kanpur</a>
+                    <a href=""> Allahabad</a>
+                    <a href=""> Aurangabad</a>
+                    <a href=""> Bhopal</a>
+                    <a href=""> Ranchi</a>
+                    <a href=""> Visakhapatnam</a>
+                    <a href=""> Bhubaneswar</a>
+                    <a href=""> Coimbatore</a>
+                    <a href=""> Mangalore</a>
+                    <a href=""> Vadodara</a>
+                    <a href=""> Nagpur</a>
+                    <a href=""> Agra</a>
+                    <a href=""> Dehradun</a>
+                    <a href=""> Mysore</a>
+                    <a href=""> Puducherry</a>
+                    <a href=""> Surat</a>
+                    <a href=""> Varanasi</a>
+                    <a href=""> Patna</a>
+                    <a href=""> Udaipur</a>
+                    <a href=""> Srinagar</a>
+                    <a href=""> Khajuraho</a>
+                    <a href=""> Neemrana</a>
+                    <a href=""> Cuttack</a>
+                    <a href=""> Trivandrum</a>
+                    <a href=""> Haridwar</a>
+                    <a href=""> Leh</a>
+                    <a href=""> Pushkar</a>
+                    <a href=""> Rajkot</a>
+                    <a href=""> Madurai</a>
+                    <a href=""> Kozhikode</a>
+                    <a href=""> Alappuzha</a>
+                    <a href=""> Thrissur</a>
+                    <a href=""> Manipal</a>
+                    <a href=""> Vijayawada</a>
+                    <a href=""> Jodhpur</a>
+                    <a href=""> Kota</a>
+                    <a href=""> Ajmer</a>
+                    <a href=""> Mussoorie</a>
+                    <a href=""> Rishikesh</a>
+                    <a href=""> Jalandhar</a>
+                    <a href=""> Jammu</a>
+                    <a href=""> Manali</a>
+                    <a href="" style="border-bottom: 1px solid black; font-weight: 400; color: black; width: auto;padding-left: 0px;"> All delivery cities</a>
+                </div>
             </div>
         </div>
     </section>
@@ -322,6 +456,7 @@
               
     </footer>
 
+    <script src="./script.js">    </script>
     
 </body>
 </html>
